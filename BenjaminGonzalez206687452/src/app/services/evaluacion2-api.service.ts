@@ -24,7 +24,6 @@ interface datos {
 export class Evaluacion2ApiService {
   // Creacion de la url
   private url = 'https://jsonplaceholder.typicode.com/posts/'
-  
   // Inclusion de http como HttpClient 
   constructor( private http : HttpClient) { }
   // Creacion de la funcion
