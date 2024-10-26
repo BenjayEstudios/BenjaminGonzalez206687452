@@ -14,10 +14,14 @@ export class HomePage implements OnInit{
   items: any[] = []
   constructor(private evaluacion2api : Evaluacion2ApiService) {}
   ngOnInit() {
+
+    
+
     this.evaluacion2api.getInfo().subscribe((data) =>{
 
       this.items = data
       console.log(this.items)
+      localStorage.setItem('api',JSON.stringify(this.items))
     })
   }
 }
